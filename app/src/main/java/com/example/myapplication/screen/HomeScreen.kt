@@ -35,7 +35,7 @@ fun HomeScreen(navController: NavHostController, isDarkMode: Boolean, onThemeTog
             TopAppBar(
                 title = { 
                     Text(
-                        "SCORE", 
+                        "SCORENOW",
                         fontWeight = FontWeight.Black,
                         color = Color.White,
                         fontSize = 24.sp,
@@ -63,7 +63,7 @@ fun HomeScreen(navController: NavHostController, isDarkMode: Boolean, onThemeTog
                 .padding(padding)
                 .background(MaterialTheme.colorScheme.background)
         ) {
-            // Sección de Equipos (Contexto visual superior)
+            // Sección de equipos destacados arriba
             Surface(
                 color = SofaDarkBlue,
                 shadowElevation = 4.dp,
@@ -98,7 +98,7 @@ fun HomeScreen(navController: NavHostController, isDarkMode: Boolean, onThemeTog
                 }
             }
 
-            // Banner principal: Para que la pantalla no se vea vacía
+            
             Card(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -131,7 +131,7 @@ fun HomeScreen(navController: NavHostController, isDarkMode: Boolean, onThemeTog
                 }
             }
 
-            // Título de sección de herramientas
+            // Título de la seccion de abajo
             Text(
                 "PANEL DE CONTROL",
                 modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp),
@@ -140,7 +140,7 @@ fun HomeScreen(navController: NavHostController, isDarkMode: Boolean, onThemeTog
                 fontWeight = FontWeight.Bold
             )
 
-            // Grid de accesos principales
+            
             Column(
                 modifier = Modifier
                     .padding(horizontal = 16.dp)
@@ -155,7 +155,7 @@ fun HomeScreen(navController: NavHostController, isDarkMode: Boolean, onThemeTog
             
             Spacer(modifier = Modifier.weight(1f))
             
-            // Footer de consejos o curiosidades (Tip didáctico)
+            
             Card(
                 modifier = Modifier.padding(16.dp),
                 colors = CardDefaults.cardColors(containerColor = Color.White),

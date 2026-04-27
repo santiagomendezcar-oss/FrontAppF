@@ -58,7 +58,7 @@ fun ResultadosScreen(navController: NavHostController, viewModel: MainViewModel)
                     val displayedPartidos = resultados.take(visibleCount)
                     
                     items(displayedPartidos) { partido ->
-                        // Formateamos la fecha para que solo muestre YYYY-MM-DD
+                        // fecha de los partidos año,mes,dia
                         val fechaCorta = if (partido.fecha_partido.length >= 10) {
                             partido.fecha_partido.substring(0, 10)
                         } else {
@@ -105,12 +105,12 @@ fun MatchCard(local: String, visita: String, gLocal: Int, gVisita: Int, fecha: S
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
-                // Local
+
                 Column(modifier = Modifier.weight(1f), horizontalAlignment = Alignment.CenterHorizontally) {
                     Text(text = local, textAlign = TextAlign.Center, fontWeight = FontWeight.Bold, fontSize = 14.sp)
                 }
                 
-                // Marcador
+
                 Surface(
                     color = Color.Black,
                     shape = RoundedCornerShape(8.dp),
@@ -125,7 +125,7 @@ fun MatchCard(local: String, visita: String, gLocal: Int, gVisita: Int, fecha: S
                     )
                 }
 
-                // Visita
+
                 Column(modifier = Modifier.weight(1f), horizontalAlignment = Alignment.CenterHorizontally) {
                     Text(text = visita, textAlign = TextAlign.Center, fontWeight = FontWeight.Bold, fontSize = 14.sp)
                 }

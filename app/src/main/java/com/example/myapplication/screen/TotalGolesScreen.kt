@@ -59,7 +59,7 @@ fun TotalGolesScreen(navController: NavHostController, viewModel: MainViewModel)
                 .padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            // Dropdown Selector
+
             ExposedDropdownMenuBox(
                 expanded = expanded,
                 onExpandedChange = { expanded = !expanded },

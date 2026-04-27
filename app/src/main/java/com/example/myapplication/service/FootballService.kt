@@ -16,7 +16,7 @@ class FootballServiceImpl : FootballService {
     override suspend fun fetchJugadoresByEquipo(equipoId: Int): List<Jugador> = emptyList()
     override suspend fun fetchJugadoresConMasGoles(minGoles: Int): List<Jugador> = emptyList()
     
-    // Dejamos esto vacío para que no muestre datos viejos si la API falla
+
     override suspend fun fetchResultadosPartidos(): List<ResulPartido> = emptyList()
 
     override suspend fun fetchTotalGolesEquipo(equipoId: Int): Int = 0

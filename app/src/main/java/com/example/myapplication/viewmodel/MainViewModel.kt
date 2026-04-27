@@ -52,7 +52,6 @@ class MainViewModel : ViewModel() {
         }
     }
 
-    // Mantener los otros métodos pero con try-catch de seguridad
     fun loadJugadoresByEquipo(equipoId: Int) {
         viewModelScope.launch {
             _isLoading.value = true

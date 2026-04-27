@@ -56,7 +56,7 @@ fun JugadoresGolesScreen(navController: NavHostController, viewModel: MainViewMo
                 .padding(padding)
                 .background(SofaBackground)
         ) {
-            // Filtro SofaScore Style
+
             Surface(
                 color = SofaDarkBlue,
                 modifier = Modifier.fillMaxWidth()
@@ -102,7 +102,7 @@ fun JugadoresGolesScreen(navController: NavHostController, viewModel: MainViewMo
                     modifier = Modifier.fillMaxSize()
                 ) {
                     item {
-                        // Table Header
+
                         Row(
                             modifier = Modifier
                                 .fillMaxWidth()
@@ -177,7 +177,7 @@ fun ScorerItem(rank: Int, nombre: String, equipo: String, goles: Int, maxGoles: 
             
             Spacer(modifier = Modifier.height(8.dp))
             
-            // Barra de rendimiento
+
             LinearProgressIndicator(
                 progress = { progress },
                 modifier = Modifier.fillMaxWidth().height(4.dp),

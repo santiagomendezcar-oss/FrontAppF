@@ -20,10 +20,10 @@ class PartidoAdapter : ListAdapter<ResulPartido, PartidoAdapter.ViewHolder>(Diff
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = getItem(position)
         
-        // Formatear fecha corta para el adaptador también
+
         val fechaCorta = if (item.fecha_partido.length >= 10) item.fecha_partido.substring(0, 10) else item.fecha_partido
         
-        // Usar los campos exactos del backend
+        // campos del backend para los datos del historial de partidos
         holder.text1.text = "${item.nombreEquipoLocal} ${item.goles_local} - ${item.goles_visita} ${item.nombreEquipoVisita}"
         holder.text2.text = "$fechaCorta @ ${item.estadio}"
     }

@@ -40,7 +40,7 @@ fun JugadoresEquipoScreen(navController: NavHostController, viewModel: MainViewM
     val jugadores by viewModel.jugadores.observeAsState(emptyList())
     val isLoading by viewModel.isLoading.observeAsState(false)
 
-    // Limpiar jugadores al entrar si no hay equipo seleccionado
+
     LaunchedEffect(Unit) {
         if (equipoId.isEmpty()) {
             viewModel.clearJugadores()
@@ -70,7 +70,7 @@ fun JugadoresEquipoScreen(navController: NavHostController, viewModel: MainViewM
                 .background(Color(0xFFF8F9FA))
                 .padding(16.dp)
         ) {
-            // Dropdown Selector (Sugerencia 3)
+
             ExposedDropdownMenuBox(
                 expanded = expanded,
                 onExpandedChange = { expanded = !expanded },
@@ -150,7 +150,7 @@ fun PlayerCard(nombre: String, posicion: String, dorsal: String) {
             modifier = Modifier.padding(16.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            // "Avatar" del jugador
+            // jugador
             Surface(
                 modifier = Modifier.size(50.dp),
                 shape = CircleShape,
@@ -168,7 +168,7 @@ fun PlayerCard(nombre: String, posicion: String, dorsal: String) {
                 Text(text = posicion, style = MaterialTheme.typography.bodySmall, color = Color.Gray)
             }
             
-            // Dorsal estilo camiseta
+            // dorsal de la camiseta
             Box(
                 modifier = Modifier
                     .size(40.dp)
